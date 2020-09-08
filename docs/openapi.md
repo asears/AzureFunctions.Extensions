@@ -102,16 +102,17 @@ public static async Task<IActionResult> RenderSwaggerUI(
 
 ### Configure App Settings Key ###
 
+> **NOTE**: The following is NOT required if your Open API related endpoints are set to the authorisation level of `Anonymous`.
+
 This key is only required if:
 
 * The Function app is deployed to Azure, and
 * The Open API related endpoints has the `AuthorizationLevel` value other than `Anonymous`.
 
-If the above conditions are met, add the following key to your `locall.settings.json` or App Settings blade on Azure.
+If the above conditions are met, add the following key to your `local.settings.json` or App Settings blade on Azure.
 
 * `OpenApi__ApiKey`: either the host key value or the master key value.
 
-> **NOTE**: It is NOT required if your Open API related endpoints are set to the authorisation level of `Anonymous`.
 
 
 ## Open API Metadata Configuration ##
